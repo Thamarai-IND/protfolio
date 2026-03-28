@@ -3,10 +3,6 @@
 import Header from "./components/Header";
 import profilePic from "./assets/profile_pic.png";
 import reactjs from "./assets/icons/reactjs.png";
-import viteLogo from "./assets/vite.svg";
-import everiLogo from "./assets/everi.svg";
-import wsiLogo from "./assets/wsi.png";
-import vestasLogo from "./assets/vestas.png";
 import angularjs from "./assets/icons/angularjs.png";
 import nodejs from "./assets/icons/nodejs.png";
 import expressjs from "./assets/icons/expressjs.png";
@@ -59,8 +55,8 @@ function App() {
             <div className="relative w-full max-w-5xl h-20 overflow-hidden">
               <div className="absolute left-0 top-0 flex animate-marquee-full w-max">
                 {[
-                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, figma, sass, css3, html5, javascript, typescript, postman,
-                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, figma, sass, css3, html5, javascript, typescript, postman
+                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, javascript, typescript, postman,
+                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, javascript, typescript, postman
                 ].map((icon, idx) => (
                   <img
                     key={idx}
