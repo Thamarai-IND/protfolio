@@ -1,0 +1,11 @@
+@keyframes marquee-full {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-full {
+	animation: marquee-full 25s linear infinite;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
