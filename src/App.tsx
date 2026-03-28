@@ -25,7 +25,7 @@ import vite from "./assets/icons/vite.png";
 import webpack from "./assets/icons/webpack.png";
 import vercel from "./assets/icons/vercel.png";
 import netlify from "./assets/icons/netlify.png";
-
+import github from "./assets/icons/github.png";
 
 import About from "./pages/About";
 import Experience from "./pages/Experience";
@@ -62,8 +62,8 @@ function App() {
             <div className="relative w-full max-w-5xl h-20 overflow-hidden">
               <div className="absolute left-0 top-0 flex animate-marquee-full w-max">
                 {[
-                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, vite, webpack, javascript, typescript, postman, vercel, netlify,
-                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, vite, webpack, javascript, typescript, postman, vercel, netlify
+                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, github, vite, webpack, javascript, typescript, postman, vercel, netlify,
+                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, github, vite, webpack, javascript, typescript, postman, vercel, netlify
                 ].map((icon, idx) => (
                   <img
                     key={idx}
