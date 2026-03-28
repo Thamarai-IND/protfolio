@@ -1,24 +1,36 @@
 import React, { useState } from 'react';
 import { projectList } from './projectData';
 import reactjs from '../assets/icons/reactjs.png';
-import viteLogo from '../assets/vite.svg';
+import angularjs from '../assets/icons/angularjs.png';
 import nodejs from '../assets/icons/nodejs.png';
+import bootstrap from '../assets/icons/bootstrap.png';
+import materialui from '../assets/icons/material-ui.png';
+import primeNG from '../assets/icons/primeNG.png';
 import expressjs from '../assets/icons/expressjs.png';
 import redis from '../assets/icons/redis-cache.png';
 import redux from '../assets/icons/redux.png';
+import razorpay from '../assets/icons/razorpay.png';
 import mongodb from '../assets/icons/mongodb.png';
 import postgres from '../assets/icons/postgresql.png';
 import aws from '../assets/icons/aws.png';
 import typescript from '../assets/icons/typescript.png';
+import tailwind from '../assets/icons/tailwind.png';
 import sass from '../assets/icons/sass.png';
 import html5 from '../assets/icons/html5.png';
 import css3 from '../assets/icons/css3.png';
 import javascript from '../assets/icons/javascript.png';
 import jwt from '../assets/icons/jwt.png';
+import passportjs from "../assets/icons/passportjs.svg";
 import vercel from '../assets/icons/vercel.png';
+import netlify from '../assets/icons/netlify.png';
+import vite from "../assets/icons/vite.png";
+import webpack from "../assets/icons/webpack.png";
+import chartjs from "../assets/icons/chartjs.svg";
+import coingecko from "../assets/icons/coingecko.png";
+import openweather from "../assets/icons/open-weather.webp";
 
 const techIcons: Record<string, string> = {
-  reactjs, viteLogo, nodejs, expressjs, redis, redux, mongodb, postgres, aws, typescript, sass, html5, css3, javascript, jwt, vercel
+  reactjs, angularjs, bootstrap, materialui, primeNG, vite, nodejs, expressjs, redis, razorpay, redux, mongodb, postgres, aws, typescript, tailwind, sass, html5, css3, javascript, jwt, passportjs, vercel, webpack, netlify, chartjs, coingecko, openweather,
 };
 
 const FILTERS = ["ALL", "FullStack", "Frontend", "Backend"];

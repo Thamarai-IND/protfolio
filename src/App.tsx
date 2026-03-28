@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import profilePic from "./assets/profile_pic.png";
 import reactjs from "./assets/icons/reactjs.png";
 import angularjs from "./assets/icons/angularjs.png";
+import bootstrap from "./assets/icons/bootstrap.png";
+import primeNG from "./assets/icons/primeNG.png";
 import nodejs from "./assets/icons/nodejs.png";
 import expressjs from "./assets/icons/expressjs.png";
 import redis from "./assets/icons/redis-cache.png";
@@ -19,6 +21,11 @@ import typescript from "./assets/icons/typescript.png";
 import sass from "./assets/icons/sass.png";
 import html5 from "./assets/icons/html5.png";
 import css3 from "./assets/icons/css3.png";
+import vite from "./assets/icons/vite.png";
+import webpack from "./assets/icons/webpack.png";
+import vercel from "./assets/icons/vercel.png";
+import netlify from "./assets/icons/netlify.png";
+
 
 import About from "./pages/About";
 import Experience from "./pages/Experience";
@@ -55,8 +62,8 @@ function App() {
             <div className="relative w-full max-w-5xl h-20 overflow-hidden">
               <div className="absolute left-0 top-0 flex animate-marquee-full w-max">
                 {[
-                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, javascript, typescript, postman,
-                  reactjs, angularjs, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, javascript, typescript, postman
+                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, vite, webpack, javascript, typescript, postman, vercel, netlify,
+                  reactjs, angularjs, bootstrap, primeNG, expressjs, nodejs, aws, azure, mongodb, postgres, redis, redux, figma, sass, css3, html5, vite, webpack, javascript, typescript, postman, vercel, netlify
                 ].map((icon, idx) => (
                   <img
                     key={idx}
