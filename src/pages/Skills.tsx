@@ -6,12 +6,16 @@ import openai from '../assets/icons/chatgpt.png';
 import reactjs from '../assets/icons/reactjs.png';
 import angularjs from '../assets/icons/angularjs.png';
 import vuejs from '../assets/icons/vuejs.png';
+import redux from '../assets/icons/redux.png';
 import typescript from '../assets/icons/typescript.png';
 import javascript from '../assets/icons/javascript.png';
 import html5 from '../assets/icons/html5.png';
 import css3 from '../assets/icons/css3.png';
 import sass from '../assets/icons/sass.png';
 import tailwind from '../assets/icons/tailwind.png';
+import storybook from '../assets/icons/storybook.png';
+import webpack from '../assets/icons/webpack.png';
+import vite from '../assets/icons/vite.png';
 import bootstrap from '../assets/icons/bootstrap.png';
 import materialui from '../assets/icons/material-ui.png';
 import primeNG from '../assets/icons/primeNG.png';
@@ -22,11 +26,24 @@ import java from '../assets/icons/java.png';
 import redis from '../assets/icons/redis-cache.png';
 import jwt from '../assets/icons/jwt.png';
 import passportjs from '../assets/icons/passportjs.svg';
+import graphql from '../assets/icons/graphql.png';
 import mongodb from '../assets/icons/mongodb.png';
 import postgres from '../assets/icons/postgresql.png';
 import mysql from '../assets/icons/sql.png';
+import postman from '../assets/icons/postman.png';
+import swagger from '../assets/icons/swagger.png';
 import aws from '../assets/icons/aws.png';
 import azure from '../assets/icons/azure.png';
+import amazonS3 from '../assets/icons/amazonS3.png';
+import awsLamda from '../assets/icons/awsLamda.png';
+import awsCloudFront from '../assets/icons/aws-cloudfront.png';
+import azureStorage from '../assets/icons/azure-storage.png';
+import azureAD from '../assets/icons/azure-active-directory.png';
+import azureDataPipeline from '../assets/icons/azure-data-pipeline.png';
+import googleFirebase from '../assets/icons/firebase.png';
+// import Heroku from '../assets/icons/heroku.png';
+// import Vercel from '../assets/icons/vercel.png';
+// import Netlify from '../assets/icons/netlify.png';
 
 const llmModels = [
   {
@@ -67,6 +84,7 @@ const techCategories = [
       { name: 'React', icon: reactjs },
       { name: 'Angular', icon: angularjs },
       { name: 'Vue', icon: vuejs },
+      { name: 'Redux', icon: redux },
       { name: 'TypeScript', icon: typescript },
       { name: 'JavaScript', icon: javascript },
       { name: 'HTML5', icon: html5 },
@@ -76,6 +94,9 @@ const techCategories = [
       { name: 'Bootstrap', icon: bootstrap },
       { name: 'Material UI', icon: materialui },
       { name: 'PrimeNG', icon: primeNG },
+      { name: 'Storybook', icon: storybook },
+      { name: 'Webpack', icon: webpack },
+      { name: 'Vite', icon: vite },
     ],
   },
   {
@@ -87,7 +108,10 @@ const techCategories = [
       { name: 'Java', icon: java },
       { name: 'Redis', icon: redis },
       { name: 'JWT', icon: jwt },
+      { name: 'GraphQL', icon: graphql },
       { name: 'Passport.js', icon: passportjs },
+      { name: 'Swagger API', icon: swagger },
+      { name: 'Postman API', icon: postman },
     ],
   },
   {
@@ -99,17 +123,11 @@ const techCategories = [
       { name: 'Redis', icon: redis },
     ],
   },
-  {
-    title: 'Cloud',
-    techs: [
-      { name: 'AWS', icon: aws },
-      { name: 'Azure', icon: azure },
-    ],
-  },
+  // Cloud section handled separately below
 ];
 
 const Skills: React.FC = () => (
-  <section id="skills" className="w-full bg-gray-900 py-20 flex flex-col items-center">
+  <section id="skills" className="w-full bg-gray-950 py-20 flex flex-col items-center">
     <h2 className="text-4xl font-extrabold text-sky-700 mb-8 text-center tracking-tight">SKILLS ACQUIRED</h2>
     <div className="w-full max-w-6xl flex flex-col gap-8 px-4">
       {/* LLM Models Section */}
@@ -138,7 +156,7 @@ const Skills: React.FC = () => (
         </div>
       </div>
       {/* Other Tech Categories */}
-      {techCategories.map((cat) => (
+      {techCategories.filter(cat => cat.title !== 'Cloud').map((cat) => (
         <div key={cat.title} className="bg-zinc-950 rounded-xl shadow p-6 flex flex-col items-start">
           <h3 className="text-2xl font-bold text-sky-500 mb-4">{cat.title}</h3>
           <div className="flex flex-row flex-wrap gap-4 w-full">
@@ -151,6 +169,56 @@ const Skills: React.FC = () => (
           </div>
         </div>
       ))}
+
+
+      {/* Cloud Section: AWS & Azure as subcategories */}
+      <div className="bg-zinc-950 rounded-xl shadow p-6 flex flex-col items-start">
+        <h3 className="text-2xl font-bold text-sky-500 mb-4">Cloud</h3>
+        {/* AWS Row */}
+        <div className="flex flex-row items-center gap-8 w-full mb-8">
+          <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-zinc-900 rounded-lg">
+            <img src={aws} alt="AWS" className="h-12 w-12 object-contain" />
+          </div>
+          <div className="flex flex-row flex-wrap gap-4">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={amazonS3} alt="Amazon S3" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">Amazon S3</span>
+            </div>
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={awsLamda} alt="AWS Lambda" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">AWS Lambda</span>
+            </div>
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={awsCloudFront} alt="AWS CloudFront" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">CloudFront</span>
+            </div>
+          </div>
+        </div>
+        {/* Azure Row */}
+        <div className="flex flex-row items-center gap-8 w-full">
+          <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-zinc-900 rounded-lg">
+            <img src={azure} alt="Azure" className="h-12 w-12 object-contain" />
+          </div>
+          <div className="flex flex-row flex-wrap gap-4">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={azureStorage} alt="Azure Storage" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">Azure Storage</span>
+            </div>
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={azureAD} alt="Azure AD" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">Azure AD</span>
+            </div>
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={azureDataPipeline} alt="Azure Data Pipeline" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">Data Pipeline</span>
+            </div>
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+              <img src={googleFirebase} alt="Firebase" className="h-10 w-10 mb-2 object-contain" />
+              <span className="text-slate-200 text-sm text-center font-medium">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 );

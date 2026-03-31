@@ -261,7 +261,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="min-h-screen bg-gray-900 flex flex-col items-center py-20">
+    <section id="experience" className="min-h-screen bg-gray-950 flex flex-col items-center py-20">
       <h2 className="text-4xl font-extrabold text-white mb-10 text-center tracking-tight">Experience</h2>
       <div className="w-full max-w-7xl space-y-10">
         {experienceData.map((exp) => (
