@@ -3,8 +3,8 @@ import linkedinIcon from '../assets/icons/linkedin.png';
 import githubIcon from '../assets/icons/github.png';
 
 const Contact: React.FC = () => (
-  <section id="contact" className=" flex flex-col justify-center items-center bg-zinc-950 py-20">
-    <h2 className="text-3xl text-white font-bold mb-8">Contact</h2>
+  <section id="contact" className=" flex flex-col justify-center items-center bg-zinc-950 py-8">
+    <h2 className="text-3xl text-sky-700 font-bold mb-8">Contact</h2>
     <div className="flex gap-8 items-center">
       {/* Linktree (styled fallback) */}
       <a

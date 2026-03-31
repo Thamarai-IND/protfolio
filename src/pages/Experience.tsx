@@ -262,10 +262,10 @@ const Experience: React.FC = () => {
 
   return (
     <section id="experience" className="min-h-screen bg-gray-950 flex flex-col items-center py-20">
-      <h2 className="text-4xl font-extrabold text-white mb-10 text-center tracking-tight">Experience</h2>
+      <h2 className="text-4xl font-extrabold text-sky-700 mb-10 text-center tracking-tight">Experience</h2>
       <div className="w-full max-w-7xl space-y-10">
         {experienceData.map((exp) => (
-          <div key={exp.company} className="bg-white rounded-xl shadow p-6">
+          <div key={exp.company} className="bg-cyan-100 rounded-xl shadow p-6">
             <div className="flex items-center gap-4 mb-2">
                   <div className="flex flex-col items-start">
                     <div className='w-60 h-25'>
@@ -282,9 +282,9 @@ const Experience: React.FC = () => {
             </div>
             <div className="mt-4 space-y-4">
               {exp.projects.map((proj) => (
-                <div key={proj.title} className="backdrop-brightness-125">
+                <div key={proj.title}>
                   <button
-                    className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-lg bg-slate-100 hover:bg-slate-200 focus:outline-none"
+                    className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-lg bg-cyan-300 hover:bg-cyan-200 focus:outline-none"
                     onClick={() => toggleAccordion(exp.company, proj.title)}
                   >
                     <span className='text-indigo-950'>{proj.title}</span>
