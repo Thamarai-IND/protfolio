@@ -1,4 +1,3 @@
-import chatgpt from '../assets/icons/chatgpt.png';
 import claude from '../assets/icons/claude.png';
 import gemini from '../assets/icons/gemini.png';
 import copilot from '../assets/icons/copilot.png';

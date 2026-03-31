@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import everiIGT from '../assets/everi.webp';
 import vestasLogo from '../assets/vestas.png';
 import ahsLogo from '../assets/ahs.webp';
-import wsiLogo from '../assets/wsi.png';
 import reactjs from '../assets/icons/reactjs.png';
 import vuejs from '../assets/icons/vuejs.png';
 import angularjs from '../assets/icons/angularjs.png';
@@ -36,8 +35,6 @@ import azure from '../assets/icons/azure.png';
 import storybook from '../assets/icons/storybook.png';
 import tailwind from '../assets/icons/tailwind.png';
 import sass from '../assets/icons/sass.png';
-import html5 from '../assets/icons/html5.png';
-import css3 from '../assets/icons/css3.png';
 import figma from "../assets/icons/figma.png";
 
 const experienceData = [
