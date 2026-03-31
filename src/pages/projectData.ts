@@ -3,7 +3,7 @@ export const projectList = [
   {
     title: "Retail Store POS Application",
     type: "FullStack",
-    description: "A scalable e-commerce platform with real-time order tracking and customer management.",
+  description: "POS app for retail: billing, inventory, analytics, users.",
     tech: ["reactjs", "redux", "bootstrap", "nodejs", "mongodb", "vercel","jwt"],
     image: "https://images.pexels.com/photos/3985096/pexels-photo-3985096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     githubLink: "https://github.com/Thamarai-IND/React-Retail-Store-POS-Application",
@@ -11,7 +11,7 @@ export const projectList = [
   {
     title: "Portfolio Website",
     type: "Frontend",
-    description: "Personal portfolio website to showcase skills and projects.",
+  description: "Portfolio site to showcase my skills and projects online.",
     tech: ["reactjs", "vite", "typescript", "sass", "tailwind"],
     image: "https://images.pexels.com/photos/4623115/pexels-photo-4623115.jpeg",
     githubLink: "https://github.com/Thamarai-IND/protfolio",
@@ -20,7 +20,7 @@ export const projectList = [
   {
     title: "User Authentication",
     type: "Backend",
-    description: "A robust API gateway for microservices architecture.",
+  description: "User authentication backend with JWT, Passport, Node, MongoDB.",
     tech: ["nodejs", "expressjs", "jwt", "passportjs","mongodb"],
     image: "https://images.pexels.com/photos/11337254/pexels-photo-11337254.jpeg",
     githubLink: "https://github.com/Thamarai-IND/Node-Auth",
@@ -28,7 +28,7 @@ export const projectList = [
   {
     title: "Gemini Clone",
     type: "Frontend",
-    description: "A robust API gateway for microservices architecture.",
+  description: "Gemini AI clone: chat, search, modern UI, Vercel deploy.",
     tech: ["reactjs", "vite", "gemini", "vercel","javascript","html5","css3"],
     image: "https://images.unsplash.com/photo-1710993011904-8f1162b9806d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     githubLink: "https://github.com/Thamarai-IND/gemini-ai",
@@ -37,7 +37,7 @@ export const projectList = [
   {
     title: "Payment Integration",
     type: "FullStack",
-    description: "A productivity app for managing daily tasks and projects.",
+  description: "Payment integration with Razorpay, Node, React, Express, MongoDB.",
     tech: ["reactjs", "nodejs", "expressjs", "mongodb", "razorpay"],
     image: "https://images.pexels.com/photos/5239803/pexels-photo-5239803.jpeg",
     githubLink: "https://github.com/Thamarai-IND/Razorpay-Checkout",
@@ -45,7 +45,7 @@ export const projectList = [
   {
     title: "Crypto Market Live",
     type: "Frontend",
-    description: "A high-converting landing page for a SaaS product.",
+  description: "Crypto market live prices, charts, news, React, APIs.",
     tech: ["reactjs","materialui","javascript", "chartjs", "coingecko", "netlify"],
     image: "https://images.pexels.com/photos/14354118/pexels-photo-14354118.jpeg",
   githubLink: "https://github.com/Thamarai-IND/crypto-market-cap",
@@ -54,7 +54,7 @@ export const projectList = [
   {
     title: "Everi IGT Website Clone",
     type: "Frontend",
-    description: "A high-converting landing page for a SaaS product.",
+  description: "Everi IGT website clone using Angular, Express, Material UI.",
     tech: ["angularjs","expressjs","typescript", "sass", "materialui", "vercel"],
     image: "https://images.pexels.com/photos/29825627/pexels-photo-29825627.jpeg",
   githubLink: "https://github.com/senvyuha-glitch/everi-webportal-demo",
@@ -63,7 +63,7 @@ export const projectList = [
   {
     title: "Open Weather",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Weather app using React, Bootstrap, OpenWeather API, Netlify.",
     tech: ["reactjs", "openweather", "bootstrap", "netlify"],
     image: "https://images.pexels.com/photos/8828681/pexels-photo-8828681.jpeg",
   githubLink: "https://github.com/Thamarai-IND/Weather-App",
@@ -72,7 +72,7 @@ export const projectList = [
   {
     title: "Angular 18 Sample Code",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Angular 18 sample app with Bootstrap, Material UI, Vercel.",
     tech: ["angularjs", "typescript", "bootstrap", "sass", "materialui", "jwt", "vercel"],
     image: "https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg",
   githubLink: "https://github.com/Thamarai-IND/angular18",
@@ -81,7 +81,7 @@ export const projectList = [
   {
     title: "Magazine Card",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Magazine card UI with Angular, TypeScript, Sass, Vercel.",
     tech: ["angularjs", "typescript", "html5", "sass", "vercel"],
     image: "https://images.pexels.com/photos/3847620/pexels-photo-3847620.jpeg",
   githubLink: "https://github.com/Thamarai-IND/magazine-card",
@@ -90,7 +90,7 @@ export const projectList = [
   {
     title: "Restraunt POS",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Restaurant POS frontend with React, TypeScript, Tailwind, Sass.",
     tech: ["reactjs", "typescript", "tailwind", "sass", "vercel"],
     image: "https://images.pexels.com/photos/12935048/pexels-photo-12935048.jpeg",
   githubLink: "https://github.com/Thamarai-IND/Restaurant-POS",
@@ -99,7 +99,7 @@ export const projectList = [
   {
     title: "Tic Tac Toe Game",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Tic Tac Toe game using HTML, CSS, JavaScript, Netlify.",
     tech: ["html5", "css3", "javascript", "netlify"],
     image: "https://images.pexels.com/photos/4016535/pexels-photo-4016535.jpeg",
   githubLink: "https://github.com/Thamarai-IND/Tic-Tac-Toe-Game",
@@ -108,7 +108,7 @@ export const projectList = [
   {
     title: "Fun Cricket",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Fun cricket game app with HTML, CSS, JavaScript, Vercel.",
     tech: ["html5", "css3", "javascript", "vercel", "netlify"],
     image: "https://images.pexels.com/photos/3718433/pexels-photo-3718433.jpeg",
   githubLink: "https://github.com/Thamarai-IND/Mini-Cricket-Fun-App",
@@ -117,7 +117,7 @@ export const projectList = [
   {
     title: "Admin Dashboard",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Admin dashboard with React, Material UI, Chart.js, Netlify.",
     tech: ["reactjs", "materialui", "javascript", "chartjs", "netlify"],
     image: "https://images.pexels.com/photos/7947846/pexels-photo-7947846.jpeg",
   githubLink: "https://github.com/Thamarai-IND/admin-dashboard",
@@ -126,7 +126,7 @@ export const projectList = [
   {
     title: "Add to Cart UI",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Add to cart UI with React, Redux, Material UI, Netlify.",
     tech: ["reactjs", "materialui", "javascript", "redux", "netlify"],
     image: "https://images.pexels.com/photos/5650049/pexels-photo-5650049.jpeg",
   githubLink: "https://github.com/Thamarai-IND/redux_fakeshop_api",
@@ -135,7 +135,7 @@ export const projectList = [
   {
     title: "React Todo List",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "React todo list app with JavaScript, CSS, HTML, Netlify.",
     tech: ["reactjs", "javascript", "css3", "html5", "netlify"],
     image: "https://images.pexels.com/photos/20279300/pexels-photo-20279300.jpeg",
   githubLink: "https://github.com/Thamarai-IND/Simple-React-ToDoList",
@@ -144,7 +144,7 @@ export const projectList = [
   {
     title: "React Form Validation",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "React form validation app with JavaScript, CSS, HTML, Netlify.",
     tech: ["reactjs", "javascript", "css3", "html5", "netlify"],
     image: "https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg",
   githubLink: "https://github.com/Thamarai-IND/React-Form-Validation",
@@ -153,7 +153,7 @@ export const projectList = [
   {
     title: "Pricing Card 1",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Pricing card UI with React, JavaScript, CSS, HTML, Netlify.",
     tech: ["reactjs", "javascript", "css3", "html5", "netlify"],
     image: "https://thamarai-vivid-portfolio.netlify.app/images/pricing.JPG",
   githubLink: "https://github.com/Thamarai-IND/react-pricing-card1",
@@ -162,7 +162,7 @@ export const projectList = [
   {
     title: "Pricing Card 2",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Pricing card UI with React, JavaScript, CSS, HTML, Netlify.",
     tech: ["reactjs", "javascript", "css3", "html5", "netlify"],
     image: "https://images.pexels.com/photos/6441571/pexels-photo-6441571.jpeg",
   githubLink: "https://github.com/Thamarai-IND/react-pricing-card2",
@@ -171,7 +171,7 @@ export const projectList = [
   {
     title: "Blog Page",
     type: "Frontend",
-    description: "A secure authentication and authorization service.",
+  description: "Blog page with React, Material UI, CSS, HTML, Netlify.",
     tech: ["reactjs", "javascript", "materialui", "css3", "html5", "netlify"],
     image: "https://images.pexels.com/photos/4126743/pexels-photo-4126743.jpeg",
   githubLink: "https://github.com/Thamarai-IND/react-blog-pages",

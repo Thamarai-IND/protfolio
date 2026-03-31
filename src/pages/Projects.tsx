@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
   const filtered = active === "ALL" ? projectList : projectList.filter(p => p.type === active);
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center bg-slate-200 py-20">
+    <section id="projects" className="min-h-screen flex flex-col items-center bg-zinc-950 py-20">
       <h2 className="text-4xl font-extrabold text-sky-700 mb-8 text-center tracking-tight">PROJECTS</h2>
       <div className="flex gap-4 mb-10">
         {FILTERS.map(f => (
@@ -55,7 +55,10 @@ const Projects: React.FC = () => {
       </div>
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {filtered.map((proj, idx) => (
-          <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+          <div
+            key={idx}
+            className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
             <img src={proj.image} alt={proj.title} className="h-48 w-full object-cover" />
             <div className="p-6 flex-1 flex flex-col">
               <h3 className="text-2xl font-bold text-sky-700 mb-2">{proj.title}</h3>

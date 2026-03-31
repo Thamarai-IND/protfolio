@@ -20,7 +20,12 @@ const Header: React.FC = () => {
   return (
     <header className="w-full bg-slate-950 text-white shadow-md fixed top-0 left-0 z-50">
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
-  <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent">Thamaraiselvan B</div>
+  <div
+    className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 bg-clip-text text-transparent transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:animate-gradient-move cursor-pointer"
+    style={{ display: 'inline-block' }}
+  >
+    Thamaraiselvan B
+  </div>
         <ul className="flex gap-8 rounded-2xl border bg-slate-900 px-6 py-1">
           {menuItems.map((item) => (
             <li key={item.target}>
