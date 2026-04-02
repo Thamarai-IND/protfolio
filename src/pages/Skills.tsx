@@ -129,21 +129,21 @@ const techCategories = [
 const Skills: React.FC = () => (
   <section id="skills" className="w-full bg-gray-950 py-20 flex flex-col items-center">
     <h2 className="text-4xl font-extrabold text-sky-700 mb-8 text-center tracking-tight">SKILLS ACQUIRED</h2>
-    <div className="w-full max-w-6xl flex flex-col gap-8 px-4">
+    <div className="w-full max-w-6xl flex flex-col gap-8 px-2 sm:px-4 md:px-6 lg:px-8">
       {/* LLM Models Section */}
-      <div className="bg-zinc-950 rounded-xl shadow p-6 flex flex-col items-start">
+      <div className="bg-zinc-950 rounded-xl shadow p-4 sm:p-6 flex flex-col items-start w-full">
         <h3 className="text-2xl font-bold text-sky-500 mb-4">LLM</h3>
         <div className="flex flex-col gap-6 w-full">
           {Array.from({ length: Math.ceil(llmModels.length / 2) }).map((_, rowIdx) => (
-            <div key={rowIdx} className="flex flex-row gap-8 w-full">
+            <div key={rowIdx} className="flex flex-col md:flex-row gap-4 md:gap-8 w-full">
               {llmModels.slice(rowIdx * 2, rowIdx * 2 + 2).map((llm) => (
-                <div key={llm.ai.name} className="flex items-start gap-6 flex-1">
-                  <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-zinc-900 rounded-lg">
-                    <img src={llm.ai.icon} alt={llm.ai.name} className="h-12 w-12 object-contain" />
+                <div key={llm.ai.name} className="flex items-start gap-4 md:gap-6 flex-1 w-full">
+                  <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-zinc-900 rounded-lg">
+                    <img src={llm.ai.icon} alt={llm.ai.name} className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
                   </div>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 w-full">
                     {llm.models.map((model) => (
-                      <div key={model.name} className="bg-zinc-900 rounded-lg p-3 shadow flex flex-col">
+                      <div key={model.name} className="bg-zinc-900 rounded-lg p-2 sm:p-3 shadow flex flex-col">
                         <span className="text-slate-200 text-base font-semibold">{model.name}</span>
                         <span className="text-slate-400 text-sm">{model.usecase}</span>
                       </div>
@@ -157,11 +157,11 @@ const Skills: React.FC = () => (
       </div>
       {/* Other Tech Categories */}
       {techCategories.filter(cat => cat.title !== 'Cloud').map((cat) => (
-        <div key={cat.title} className="bg-zinc-950 rounded-xl shadow p-6 flex flex-col items-start">
+        <div key={cat.title} className="bg-zinc-950 rounded-xl shadow p-4 sm:p-6 flex flex-col items-start w-full">
           <h3 className="text-2xl font-bold text-sky-500 mb-4">{cat.title}</h3>
-          <div className="flex flex-row flex-wrap gap-4 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 w-full">
             {cat.techs.map((tech) => (
-              <div key={tech.name} className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow hover:scale-105 transition-transform">
+              <div key={tech.name} className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-full h-28 shadow hover:scale-105 transition-transform">
                 <img src={tech.icon} alt={tech.name} className="h-10 w-10 mb-2 object-contain" />
                 <span className="text-slate-200 text-sm text-center font-medium">{tech.name}</span>
               </div>
@@ -172,47 +172,47 @@ const Skills: React.FC = () => (
 
 
       {/* Cloud Section: AWS & Azure as subcategories */}
-      <div className="bg-zinc-950 rounded-xl shadow p-6 flex flex-col items-start">
+      <div className="bg-zinc-950 rounded-xl shadow p-4 sm:p-6 flex flex-col items-start w-full">
         <h3 className="text-2xl font-bold text-sky-500 mb-4">Cloud</h3>
         {/* AWS Row */}
-        <div className="flex flex-row items-center gap-8 w-full mb-8">
-          <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-zinc-900 rounded-lg">
-            <img src={aws} alt="AWS" className="h-12 w-12 object-contain" />
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full mb-8">
+          <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-zinc-900 rounded-lg mb-2 sm:mb-0">
+            <img src={aws} alt="AWS" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
           </div>
-          <div className="flex flex-row flex-wrap gap-4">
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+          <div className="flex flex-row flex-wrap gap-3 sm:gap-4 w-full">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={amazonS3} alt="Amazon S3" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">Amazon S3</span>
             </div>
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={awsLamda} alt="AWS Lambda" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">AWS Lambda</span>
             </div>
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={awsCloudFront} alt="AWS CloudFront" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">CloudFront</span>
             </div>
           </div>
         </div>
         {/* Azure Row */}
-        <div className="flex flex-row items-center gap-8 w-full">
-          <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 bg-zinc-900 rounded-lg">
-            <img src={azure} alt="Azure" className="h-12 w-12 object-contain" />
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full">
+          <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-zinc-900 rounded-lg mb-2 sm:mb-0">
+            <img src={azure} alt="Azure" className="h-10 w-10 sm:h-12 sm:w-12 object-contain" />
           </div>
-          <div className="flex flex-row flex-wrap gap-4">
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+          <div className="flex flex-row flex-wrap gap-3 sm:gap-4 w-full">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={azureStorage} alt="Azure Storage" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">Azure Storage</span>
             </div>
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={azureAD} alt="Azure AD" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">Azure AD</span>
             </div>
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={azureDataPipeline} alt="Azure Data Pipeline" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">Data Pipeline</span>
             </div>
-            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-3 w-24 h-28 shadow">
+            <div className="flex flex-col items-center bg-zinc-900 rounded-lg p-2 sm:p-3 w-24 h-28 shadow">
               <img src={googleFirebase} alt="Firebase" className="h-10 w-10 mb-2 object-contain" />
               <span className="text-slate-200 text-sm text-center font-medium">Firebase</span>
             </div>

@@ -243,15 +243,7 @@ const experienceData = [
 ];
 
 const Experience: React.FC = () => {
-  const [open, setOpen] = useState<{ [key: string]: boolean }>(() => {
-    const initial: { [key: string]: boolean } = {};
-    experienceData.forEach(exp => {
-      if (exp.projects && exp.projects.length > 0) {
-        initial[`${exp.company}-${exp.projects[0].title}`] = true;
-      }
-    });
-    return initial;
-  });
+  const [open, setOpen] = useState<{ [key: string]: boolean }>({});
 
   const toggleAccordion = (company: string, project: string) => {
     setOpen((prev) => ({
@@ -261,52 +253,61 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="min-h-screen bg-gray-950 flex flex-col items-center py-20">
-      <h2 className="text-4xl font-extrabold text-sky-700 mb-10 text-center tracking-tight">Experience</h2>
-      <div className="w-full max-w-7xl space-y-10">
+    <section id="experience" className="min-h-screen bg-gray-950 flex flex-col items-center py-12 sm:py-16 md:py-20">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-sky-700 mb-6 sm:mb-10 text-center tracking-tight">Experience</h2>
+      <div className="w-full max-w-7xl space-y-6 sm:space-y-10 px-2 sm:px-4 md:px-8">
         {experienceData.map((exp) => (
-          <div key={exp.company} className="bg-cyan-100 rounded-xl shadow p-6">
-            <div className="flex items-center gap-4 mb-2">
-                  <div className="flex flex-col items-start">
-                    <div className='w-60 h-25'>
-                        <img
-                          src={exp.logo}
-                          alt={exp.company}
-                          className={`mb-2${exp.company.includes('Vestas') ? ' w-32' : ''}`}
-                          style={exp.company.includes('Vestas') ? { width: '8rem', height: 'auto' } : {}}
-                        />
-                    </div>
-                    <div className="text-sky-600 font-semibold mb-1">{exp.designation}</div>
-                    <div className="text-slate-500 text-sm">{exp.years}</div>
-                  </div>
+          <div key={exp.company} className="bg-cyan-100 rounded-xl shadow p-4 sm:p-6">
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-2">
+              <div className="flex flex-col items-center sm:items-start w-full sm:w-auto">
+                <div className='w-32 sm:w-80 h-8 sm:h-8 flex items-center mb-2'>
+                  <img
+                    src={exp.logo}
+                    alt={exp.company}
+                    className={`mb-2${exp.company.includes('Vestas') ? '' : ''}`}
+                    style={
+                      exp.company.includes('Vestas')
+                        ? {
+                            width: '8rem',
+                            height: 'auto',
+                            // For tablet (sm), use 12rem; for desktop (md+), use 8rem
+                            ...(window.innerWidth >= 640 && window.innerWidth < 768 ? { width: '12rem' } : {})
+                          }
+                        : { maxWidth: '100%', height: 'auto' }
+                    }
+                  />
+                </div>
+                <div className="text-sky-600 font-semibold mb-1 text-sm sm:text-base">{exp.designation}</div>
+                <div className="text-slate-500 text-xs sm:text-sm">{exp.years}</div>
+              </div>
             </div>
-            <div className="mt-4 space-y-4">
+            <div className="mt-3 sm:mt-4 space-y-3 sm:space-y-4">
               {exp.projects.map((proj) => (
                 <div key={proj.title}>
                   <button
-                    className="w-full flex justify-between items-center px-4 py-3 text-left font-semibold text-lg bg-cyan-300 hover:bg-cyan-200 focus:outline-none"
+                    className="w-full flex justify-between items-center px-3 sm:px-4 py-2 sm:py-3 text-left font-semibold text-base sm:text-lg bg-cyan-300 hover:bg-cyan-200 focus:outline-none"
                     onClick={() => toggleAccordion(exp.company, proj.title)}
                   >
                     <span className='text-indigo-950'>{proj.title}</span>
                     <span className='text-indigo-500'>{open[`${exp.company}-${proj.title}`] ? '▲' : '▼'}</span>
                   </button>
                   {open[`${exp.company}-${proj.title}`] && (
-                    <div className="p-4 bg-slate-200">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div className="p-3 sm:p-4 bg-slate-200">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
                         {proj.technologies.map((tech, idx) => (
-                          <img key={idx} src={tech} alt="tech" className="w-8 h-8" />
+                          <img key={idx} src={tech} alt="tech" className="w-7 h-7 sm:w-8 sm:h-8" />
                         ))}
                       </div>
-                      <div className="mb-2 text-slate-700">{proj.description}</div>
+                      <div className="mb-2 text-slate-700 text-xs sm:text-sm">{proj.description}</div>
                       <div className="mb-2">
                         <span className="font-semibold text-sky-700">Roles & Responsibilities:</span>
-                        <ul className="list-disc pl-6 text-slate-700">
+                        <ul className="list-disc pl-4 sm:pl-6 text-slate-700 text-xs sm:text-sm">
                           {proj.roles.map((role, idx) => (
                             <li key={idx}>{role}</li>
                           ))}
                         </ul>
                       </div>
-                      <div className="font-semibold text-sky-700">Project Duration: <span className='text-sm text-gray-800'>{proj.duration}</span></div>
+                      <div className="font-semibold text-sky-700 text-xs sm:text-sm">Project Duration: <span className='text-xs sm:text-sm text-gray-800'>{proj.duration}</span></div>
                     </div>
                   )}
                 </div>

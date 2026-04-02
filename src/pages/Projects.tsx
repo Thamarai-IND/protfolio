@@ -40,9 +40,9 @@ const Projects: React.FC = () => {
   const filtered = active === "ALL" ? projectList : projectList.filter(p => p.type === active);
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center bg-zinc-950 py-20">
-      <h2 className="text-4xl font-extrabold text-sky-700 mb-8 text-center tracking-tight">PROJECTS</h2>
-      <div className="flex gap-4 mb-10">
+    <section id="projects" className="min-h-screen flex flex-col items-center bg-zinc-950 py-12 sm:py-16 md:py-20">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-sky-700 mb-6 sm:mb-8 text-center tracking-tight">PROJECTS</h2>
+      <div className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 justify-center w-full px-2">
         {FILTERS.map(f => (
           <button
             key={f}
@@ -53,27 +53,27 @@ const Projects: React.FC = () => {
           </button>
         ))}
       </div>
-      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 px-1 sm:px-0">
         {filtered.map((proj, idx) => (
           <div
             key={idx}
             className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
-            <img src={proj.image} alt={proj.title} className="h-48 w-full object-cover" />
-            <div className="p-6 flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold text-sky-700 mb-2">{proj.title}</h3>
-              <div className="flex flex-wrap gap-2 mb-3">
+            <img src={proj.image} alt={proj.title} className="h-40 sm:h-48 w-full object-cover" />
+            <div className="p-4 sm:p-6 flex-1 flex flex-col">
+              <h3 className="text-lg sm:text-2xl font-bold text-sky-700 mb-1 sm:mb-2">{proj.title}</h3>
+              <div className="flex flex-wrap gap-1 sm:gap-2 mb-2 sm:mb-3">
                 {proj.tech.map((tech, i) => (
-                  <img key={i} src={techIcons[tech]} alt={tech} className="h-7 w-7" title={tech} />
+                  <img key={i} src={techIcons[tech]} alt={tech} className="h-6 w-6 sm:h-7 sm:w-7" title={tech} />
                 ))}
               </div>
-              <p className="text-slate-700 mb-4 flex-1">{proj.description}</p>
-              <div className="mt-auto flex gap-3">
+              <p className="text-slate-700 mb-2 sm:mb-4 flex-1 text-sm sm:text-base">{proj.description}</p>
+              <div className="mt-auto flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <a
                   href={proj.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-900 transition"
+                  className="inline-block px-3 sm:px-4 py-2 bg-gray-800 text-white rounded-full font-semibold hover:bg-gray-900 transition text-xs sm:text-base text-center"
                 >
                   GitHub
                 </a>
