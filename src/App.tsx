@@ -50,7 +50,13 @@ function App() {
           <div className="w-full max-w-full flex flex-col md:flex-row items-center justify-center gap-4 px-2 sm:px-4">
             {/* Left: Profile Picture */}
             <div className="flex-shrink-0 flex justify-center items-center w-full md:max-w-md mb-6 md:mb-0">
-              <img src={profilePic} alt="Profile" className="rounded-full w-40 h-40 sm:w-60 sm:h-60 md:w-[320px] md:h-[320px] object-cover" />
+              <div className="rounded-full p-[10px]">
+                <img
+                  src={profilePic}
+                  alt="Profile"
+                  className="rounded-full w-40 h-40 sm:w-60 sm:h-60 md:w-[320px] md:h-[320px] object-cover object-[center_38%]"
+                />
+              </div>
             </div>
             {/* Right: Content */}
             <div className="flex-1 text-center md:text-left">
